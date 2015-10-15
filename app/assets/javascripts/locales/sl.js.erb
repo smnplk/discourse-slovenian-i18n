@@ -1,0 +1,8 @@
+//= depend_on 'client.sl.yml'
+//= require locales/i18n
+<%= JsLocaleHelper.output_locale(:sl) %>
+I18n.pluralizationRules['sl'] = function (n) {
+  if (n == 1) return "one";
+  if (n > 1) return "other";
+  return "other";
+}
