@@ -36,3 +36,11 @@ hooks:
           - cp -rT discourse-slovenian-i18n/ /var/www/discourse/
           - rm -rf discourse-slovenian-i18n
 ```
+
+Then go inside your container and let rails regenerate assets. This is done via bash script that we copied above.
+
+cd /var/discourse
+./launcher ssh app
+./reload_i18.sh
+exit
+./launcher restart app
